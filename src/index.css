@@ -39,3 +39,12 @@ body {
   transform: scale(1);
   opacity: 1;
 }
+
+.icon-hover {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.icon-hover:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}

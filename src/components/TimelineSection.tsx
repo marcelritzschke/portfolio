@@ -10,28 +10,36 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
 }) => {
   const timelineData = [
     {
-      year: "2020",
-      title: "Started Learning Programming",
+      year: "2012",
+      image: "masterthesis.png",
+      subtitle: "Leipzig, Germany",
+      title: "University of Leipzig",
       description:
-        "Began my journey into the world of programming with online courses. I started with basic HTML, CSS, and JavaScript, and gradually moved on to more complex topics. I spent countless hours practicing and building small projects to solidify my understanding.",
+        "Studied <strong>physics</strong>, earning a bachelor's and <strong>master's degree</strong> with a focus on semiconductor physics. Along the way, I discovered my passion for software engineering.",
+    },
+    {
+      year: "2017",
+      image: "efs.png",
+      subtitle: "Ingolstadt, Germany",
+      title: "e:fs TechHub GmbH",
+      description:
+        "Worked on HAF software engineering for an <strong>L4 parking</strong> function. Designed and optimized the <strong>trajectory & path planner</strong> module, leveraging CUDA parallelization and overseeing its architecture.",
     },
     {
       year: "2021",
-      title: "First Project",
+      image: "cariad.png",
+      subtitle: "Beijing, China",
+      title: "CARIAD China",
       description:
-        "Developed my first web application using HTML, CSS, and JavaScript. This project was a simple to-do list app that allowed users to add, edit, and delete tasks. It was a great learning experience and helped me understand the basics of web development.",
+        "Contributed to system engineering for the <strong>E3 2.0 vehicle architecture</strong>. Worked on <strong>AI.SDK</strong> development, shaping VW Group's next-generation operating system.",
     },
     {
       year: "2022",
-      title: "Learned React",
+      image: "mb.png",
+      subtitle: "Beijing, China",
+      title: "Mercedes-Benz China",
       description:
-        "Dived into React.js and built several projects to enhance my skills. I created a weather app, a movie search app, and a personal blog. Each project taught me something new about React and helped me become more comfortable with the library.",
-    },
-    {
-      year: "2023",
-      title: "Portfolio Launch",
-      description:
-        "Launched my personal portfolio website to showcase my work. The portfolio includes all the projects I have worked on, along with detailed descriptions and links to the live versions and source code. It also features a blog where I share my thoughts on various programming topics.",
+        "Worked on <strong>Gen5 L2+</strong> system adaption specifically for China market. Designed and implemented <strong>ODD and path planning</strong>, focusing on nationwide coverage for ramps and interchanges. Additionally, set up a mini HiL + SiL environment for UI/UX testing.",
     },
   ];
 
@@ -55,7 +63,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
           }
         });
       },
-      { threshold: 1.0 }
+      { threshold: 0.8 }
     );
 
     const items = timelineRef.current?.querySelectorAll(".timeline-item");
@@ -91,12 +99,24 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
                 </div>
               </div>
               <div
-                className="timeline-item card col-9 ms-5 mb-5"
+                className="timeline-item card col-9 ms-5 mb-5 m-0 p-0"
                 style={{ maxWidth: "600px" }}
               >
+                <img
+                  className="card-img-top w-100"
+                  src={item.image}
+                  alt="Card image cap"
+                  style={{ height: "200px", objectFit: "cover" }} // Adjust height as needed
+                />
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
-                  <p className="card-text">{item.description}</p>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    {item.subtitle}
+                  </h6>
+                  <p
+                    className="card-text mt-3"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  ></p>
                 </div>
               </div>
             </div>
