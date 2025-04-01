@@ -37,7 +37,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setIsAtHeroSection }) => {
             <div className="col-auto text-start">
               <h1 className="greeting">Hello, I'm Marcel 👋</h1>
               <p className="bio">
-                Mercedes-Benz China, Software Engineer, Welcome!
+                Software Engineer at Mercedes-Benz China, Welcome! 🚀
               </p>
             </div>
             <div className="col-auto text-start">
