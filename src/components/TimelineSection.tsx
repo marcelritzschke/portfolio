@@ -16,6 +16,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
       title: "University of Leipzig",
       description:
         "Studied <strong>physics</strong>, earning a bachelor's and <strong>master's degree</strong> with a focus on semiconductor physics. Along the way, I discovered my passion for software engineering.",
+      badges: ["Physics", "Semiconductors"],
     },
     {
       year: "2017",
@@ -24,6 +25,14 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
       title: "e:fs TechHub GmbH",
       description:
         "Worked on HAF software engineering for an <strong>L4 parking</strong> function. Designed and optimized the <strong>trajectory & path planner</strong> module, leveraging CUDA parallelization and overseeing its architecture.",
+      badges: [
+        "L4 Parking",
+        "Trajectory Planning",
+        "Modern C++",
+        "CUDA",
+        "Agile",
+        "CI/CD",
+      ],
     },
     {
       year: "2021",
@@ -32,6 +41,12 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
       title: "CARIAD China",
       description:
         "Contributed to system engineering for the <strong>E3 2.0 vehicle architecture</strong>. Worked on <strong>AI.SDK</strong> development, shaping VW Group's next-generation operating system.",
+      badges: [
+        "Vehicle Architecture",
+        "AI/ML Infrastructure",
+        "Python",
+        "Cross-Regional Collaboration",
+      ],
     },
     {
       year: "2022",
@@ -40,6 +55,14 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
       title: "Mercedes-Benz China",
       description:
         "Worked on <strong>Gen5 L2+</strong> system adaption specifically for China market. Designed and implemented <strong>ODD and path planning</strong>, focusing on nationwide coverage for ramps and interchanges. Additionally, set up a mini HiL + SiL environment for UI/UX testing.",
+      badges: [
+        "L2+ Driving",
+        "ODD Design",
+        "Path Planning",
+        "C",
+        "HiL/ SiL",
+        "China Localization",
+      ],
     },
   ];
 
@@ -117,6 +140,14 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
                     className="card-text mt-3"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   ></p>
+                  {item.badges.map((badge, badgeIndex) => (
+                    <span
+                      className="badge bg-secondary me-2 fs-7 p-2"
+                      key={badgeIndex}
+                    >
+                      {badge}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
