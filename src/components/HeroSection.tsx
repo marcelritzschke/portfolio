@@ -40,7 +40,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setIsAtHeroSection }) => {
                 Software Engineer at Mercedes-Benz China, Welcome! 🚀
               </p>
             </div>
-            <div className="col-auto text-start">
+            <div className="col-auto text-start position-relative">
               <img
                 src="headshot.jpg"
                 alt="Profile"
@@ -51,6 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setIsAtHeroSection }) => {
                   width: "200px",
                 }}
               />
+              <span className="nickname-popup">马赛</span>
             </div>
           </div>
           {/* <div className="flex-grow-1"></div> */}

@@ -11,7 +11,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
   const timelineData = [
     {
       year: "2012",
-      image: "masterthesis.png",
+      image: "merkel.jpg",
       subtitle: "Leipzig, Germany",
       title: "University of Leipzig",
       description:
@@ -20,7 +20,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
     },
     {
       year: "2017",
-      image: "efs.png",
+      image: "efs.jpg",
       subtitle: "Ingolstadt, Germany",
       title: "e:fs TechHub GmbH",
       description:
@@ -36,7 +36,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
     },
     {
       year: "2021",
-      image: "cariad.png",
+      image: "cariad.jpg",
       subtitle: "Beijing, China",
       title: "CARIAD China",
       description:
@@ -50,7 +50,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({
     },
     {
       year: "2022",
-      image: "mb.png",
+      image: "mb.jpg",
       subtitle: "Beijing, China",
       title: "Mercedes-Benz China",
       description:
