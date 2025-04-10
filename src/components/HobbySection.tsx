@@ -5,7 +5,7 @@ const HobbySection: React.FC = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const [hasReachedBottom, setHasReachedBottom] = useState(false);
-  const totalSlides = 2;
+  const totalSlides = 3;
   const scrollThrottle = 1000;
   const bottomCooldown = 500;
 
@@ -85,6 +85,20 @@ const HobbySection: React.FC = () => {
               <h5>Into the Wilds of Beijing</h5>
               {/* <p>
                 Some representative placeholder content for the second slide.
+              </p> */}
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              src="civ.jpg"
+              className="d-block w-100"
+              alt="Third slide"
+              style={{ height: "75vh", objectFit: "cover" }}
+            />
+            <Carousel.Caption className="bg-dark bg-opacity-50 p-3 rounded">
+              <h5>Just for Fun</h5>
+              {/* <p>
+                Some representative placeholder content for the third slide.
               </p> */}
             </Carousel.Caption>
           </Carousel.Item>
